@@ -4,13 +4,12 @@ import javax.swing.*;
 
 public class Xogo {
     public void Adiviñar(){
-        double numAd = (int)(Math.random()*5); //numero random dado por la maquina
+        double numAd = (int)(Math.random()*50); //numero random dado por la maquina
         int numProp=0;                   //inicializo en 0 o numProp
         while(numAd!=numProp){
 
-            String texto1 = JOptionPane.showInputDialog("¿Que número cree que é? (1-50)");
-            numProp = Integer.parseInt(texto1); //numero proporcionado al ordenador
-            int diferencia = (int) Math.abs(numAd-numProp);
+            numProp = Integer.parseInt(JOptionPane.showInputDialog("¿Que número cree que é? (1-50)")); //numero proporcionado al ordenador
+            int diferencia = (int) Math.abs(numAd-numProp); //diferencia= valor absoluto de <numAd-numProp>
             if(diferencia>20) {
                 JOptionPane.showMessageDialog(null, "Moi lonxe");
             }
